@@ -57,7 +57,8 @@ import Header from './components/Header'
 import ProtectedRoute from './components/ProtectedRoute'
 import CreateStudentPage from './components/CreateStudentPage'
 import EditStudentPage from './components/EditStudentPage'
-import AiChatPage from './components/AiChatPage'
+/*import AiChatPage from './components/AiChatPage'*/
+import ChatPage from './components/ChatPage'
 export default function App() {
   return (
     <div className="sma-app">
@@ -93,13 +94,9 @@ export default function App() {
         } />
 
         <Route path="*" element={<Navigate to="/" replace />} />
-        <Route path="/ai"
-element={
-    <ProtectedRoute>
-      <AiChatPage />
-    </ProtectedRoute>
-  }
-/>
+        
+        <Route path="/ai/chat" element={<ProtectedRoute><ChatPage /></ProtectedRoute>} />
+
       </Routes>
     </div>
   );
