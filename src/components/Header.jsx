@@ -26,7 +26,7 @@ export default function Header() {
           Students
         </NavLink>
         
-        
+        <Link to="/ai" className="sma-nav-link">AI Assistant</Link>
         <Link to="/ai/chat" className="sma-nav-link">AI Chat</Link>
         <Link to="/ai/stream" className="sma-nav-link">AI Chat (Stream)</Link>
         
