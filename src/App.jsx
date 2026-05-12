@@ -59,6 +59,7 @@ import CreateStudentPage from './components/CreateStudentPage'
 import EditStudentPage from './components/EditStudentPage'
 /*import AiChatPage from './components/AiChatPage'*/
 import ChatPage from './components/ChatPage'
+import StreamChatPage from './components/StreamChatPage'
 export default function App() {
   return (
     <div className="sma-app">
@@ -96,7 +97,8 @@ export default function App() {
         <Route path="*" element={<Navigate to="/" replace />} />
         
         <Route path="/ai/chat" element={<ProtectedRoute><ChatPage /></ProtectedRoute>} />
-
+        <Route path="/ai/stream" element={<ProtectedRoute><StreamChatPage /></ProtectedRoute>} />
+         
       </Routes>
     </div>
   );
